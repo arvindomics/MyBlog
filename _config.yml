@@ -4,20 +4,6 @@ theme: jekyll-theme-cayman
 
 show_downloads: false
 
-# Add custom CSS
-sass:
-  style: compressed
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      css: "/assets/css/style.css"
-
-# Navigation links
-nav:
-  - title: "Home"
-    url: /
-  - title: "Poetry"
-    url: /poetry/
+# Ensure GitHub Pages includes your custom stylesheet
+include:
+  - assets/css/style.css
