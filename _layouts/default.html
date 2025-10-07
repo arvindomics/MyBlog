@@ -7,14 +7,16 @@
 </head>
 <body>
   <header>
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <nav>
-      <ul>
-        {% for item in site.nav %}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="header-container">
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav>
+        <ul>
+          {% for item in site.nav %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
