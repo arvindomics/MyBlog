@@ -1,8 +1,18 @@
 ---
-layout: home
+layout: default
 title: "Poetry Collection ✨"
 permalink: /poetry/
 ---
 
-Welcome to my poetry collection.  
-Here you’ll find all my Shayari posts gathered in one place.
+<h2>My Shayari & Poetry</h2>
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.categories contains "poetry" %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span style="font-size:0.9em; color:#888;">— {{ post.date | date: "%B %d, %Y" }}</span>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
