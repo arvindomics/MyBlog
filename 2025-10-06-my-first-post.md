@@ -1,6 +1,9 @@
 ---
 layout: post
-title: "My First Blog Post"
-date: 2025-10-06
+title: "Shayari ✍️"
+date: 2025-10-07
+categories: poetry
 ---
-Hello world! This is my very first post on my GitHub Pages blog.
+
+**Nawaqif hume chale waqut ko hamrah kr,**  
+*ladkhdati Zindgi ne chalna sikha diya*
