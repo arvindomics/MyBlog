@@ -1,25 +1,44 @@
+/* Global font and background */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9fafc;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
 /* Header customization */
 header, .page-header {
   background: linear-gradient(135deg, #6a11cb, #2575fc); /* purple → blue */
   color: white;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between; /* title left, nav right */
-  align-items: center;
+  padding: 20px 40px;
 }
 
-/* Blog title */
-header h1, header h2, .project-name {
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Title left, nav right */
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header h1, .project-name {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
 }
 
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Navigation Bar */
 nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   gap: 25px;
 }
@@ -29,10 +48,10 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff; /* white text */
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 5px 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -41,4 +60,48 @@ nav ul li a {
 nav ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #ffeb3b; /* yellow highlight */
+}
+
+/* Blog post container styling */
+.post-content, article {
+  background: #ffffff;
+  padding: 20px 25px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Poetry / Shayari styling */
+.poetry {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.8;
+  background: #fff8f0;
+  border-left: 4px solid #f39c12;
+  padding: 20px;
+  margin: 25px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 40px;
+  padding: 20px;
 }
