@@ -1,9 +1,10 @@
 title: "Arvind’s Blog"
 description: "Thoughts, notes, and stories ✨"
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman
 
 show_downloads: false
 
 # Ensure GitHub Pages includes your custom stylesheet
 include:
   - assets/css/style.css
+
