@@ -1,79 +1,27 @@
-/* Global font and background */
-body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9fafc;
-  color: #222;
-  line-height: 1.6;
-}
-
 /* Header customization */
 header, .page-header {
   background: linear-gradient(135deg, #6a11cb, #2575fc); /* purple → blue */
   color: white;
-  padding: 25px 0;
-  text-align: center;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between; /* title left, nav right */
+  align-items: center;
 }
 
+/* Blog title */
 header h1, header h2, .project-name {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
-}
-
-/* Blog post container styling */
-.post-content, article {
-  background: #ffffff;
-  padding: 20px 25px;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* Links */
-a {
-  color: #007acc;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 40px;
-}
-
-/* Poetry / Shayari styling */
-.poetry {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1.3rem;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.8;
-  background: #fff8f0;
-  border-left: 4px solid #f39c12;
-  padding: 20px;
-  margin: 25px auto;
-  max-width: 700px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 0;
 }
 
 /* Navigation Bar */
-nav {
-  margin-top: 15px;
-}
-
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  gap: 25px;
 }
 
 nav ul li {
