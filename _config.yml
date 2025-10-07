@@ -14,3 +14,10 @@ defaults:
       path: ""
     values:
       css: "/assets/css/style.css"
+
+# Navigation links
+nav:
+  - title: "Home"
+    url: /
+  - title: "Poetry"
+    url: /poetry/
