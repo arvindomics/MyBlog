@@ -8,8 +8,10 @@ body {
 
 /* Header customization */
 header, .page-header {
-  background: linear-gradient(120deg, #4facfe, #00f2fe);
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* purple → blue */
   color: white;
+  padding: 25px 0;
+  text-align: center;
 }
 
 header h1, header h2, .project-name {
