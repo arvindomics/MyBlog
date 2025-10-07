@@ -2,10 +2,7 @@ title: "Arvind’s Blog"
 description: "Thoughts, notes, and stories ✨"
 theme: jekyll-theme-cayman
 
-# Optional settings for style
 show_downloads: false
-plugins:
-  - jekyll-remote-theme
 
 # Add custom CSS
 sass:
@@ -17,5 +14,3 @@ defaults:
       path: ""
     values:
       css: "/assets/css/style.css"
-
-
