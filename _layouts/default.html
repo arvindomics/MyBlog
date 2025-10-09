@@ -8,14 +8,17 @@
 <body>
   <!-- Header -->
   <header class="site-header">
-    <h1 class="site-title">{{ site.title }}</h1>
-    <p class="site-description">{{ site.description }}</p>
-    <nav>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/poetry/' | relative_url }}">Poetry</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Arvind's photo" class="profile-pic">
+      <h1 class="site-title">{{ site.title }}</h1>
+      <p class="site-description">{{ site.description }}</p>
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/poetry/' | relative_url }}">Poetry</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Main content -->
