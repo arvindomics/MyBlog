@@ -1,94 +1,92 @@
 /* Global font and background */
 body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9fafc;
-  color: #222;
-  line-height: 1.6;
+  background: #f5f7fa;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* Header customization */
-header, .page-header {
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* purple → blue */
+/* Header Hero Section */
+.site-header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
-  padding: 15px 40px;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 4px solid #eee;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between; /* Blog title left, nav right */
+  flex-direction: column;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
-header h1, .project-name {
-  font-size: 1.8rem;
-  font-weight: bold;
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-bottom: 15px;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
   margin: 0;
 }
 
-header h1 a {
-  color: white;
-  text-decoration: none;
+.header-text p {
+  margin: 5px 0 20px;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 /* Navigation Bar */
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  display: inline;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 15px 0 0;
 }
 
 nav ul li a {
-  color: #ffffff;
-  font-weight: 500;
+  color: white;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 6px 12px;
-  border-radius: 5px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffeb3b; /* yellow highlight */
+  background: rgba(255,255,255,0.2);
+  color: #ffeb3b;
 }
 
-/* Blog post container styling */
-.post-content, article {
-  background: #ffffff;
-  padding: 20px 25px;
+/* Blog Post Cards */
+article, .post-content {
+  background: white;
+  padding: 25px;
   margin: 20px auto;
   max-width: 800px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Links inside posts */
-.post-content a {
-  color: #6a11cb;
-  font-weight: 600;
-}
-.post-content a:hover {
-  color: #2575fc;
-  text-decoration: underline;
+article h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
 }
 
-/* Poetry / Shayari styling */
+/* Poetry Styling */
 .poetry {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: "Georgia", serif;
   font-size: 1.3rem;
   font-style: italic;
   text-align: center;
-  line-height: 1.8;
   background: #fff8f0;
   border-left: 4px solid #f39c12;
   padding: 20px;
@@ -102,4 +100,6 @@ nav ul li a:hover {
 footer {
   text-align: center;
   font-size: 0.9rem;
-  colo
+  color: #555;
+  margin: 40px 0 20px;
+}
