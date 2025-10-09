@@ -1,9 +1,8 @@
 /* Global font and background */
 body {
-  /* Retain great font stack */
-  font-family: 'Poppins', sans-serif; /* Adding a slightly trendier font for a modern feel */
-  background-color: #eef3f8; /* Lighter, cooler background */
-  color: #1a1a1a; /* Deeper black for better contrast */
+  font-family: 'Poppins', sans-serif;
+  background-color: #eef3f8;
+  color: #1a1a1a;
   line-height: 1.7;
   margin: 0;
   padding: 0;
@@ -14,31 +13,26 @@ body {
 
 /* Header styling */
 .site-header {
-  /* More dramatic, deeper gradient */
-  background: linear-gradient(135deg, #4300e8, #a858ff); /* Deep royal purple to a bright lavender */
+  background: linear-gradient(135deg, #4300e8, #a858ff);
   color: #fff;
-  padding: 40px 0 30px 0; /* More vertical padding */
+  padding: 40px 0 30px 0;
   text-align: center;
-  /* More pronounced, layered shadow for depth */
   box-shadow: 0 8px 25px rgba(0,0,0,0.3), 0 0 0 8px rgba(255, 255, 255, 0.05) inset;
-  position: relative; /* For potential future z-index/positioning effects */
-  overflow: hidden;
 }
 
 .site-title {
-  font-size: 3rem; /* Larger title */
+  font-size: 3rem;
   margin: 0;
-  font-weight: 800; /* Extra bold */
-  letter-spacing: 2px; /* Subtle spacing */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for pop */
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .site-description {
   font-size: 1.35rem;
   margin-top: 10px;
-  font-style: normal; /* Less common to use italic here in 'fancier' designs */
   opacity: 0.95;
-  font-weight: 300; /* Lighter weight for contrast */
+  font-weight: 300;
 }
 
 /* Navigation Bar */
@@ -52,7 +46,7 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 40px; /* Increased gap */
+  gap: 40px;
 }
 
 nav ul li a {
@@ -60,66 +54,60 @@ nav ul li a {
   font-weight: 600;
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 8px 15px; /* Larger hit area */
-  border-radius: 50px; /* Pill shape for a modern, 'chip' look */
-  /* Using a box-shadow for a subtle lift effect */
-  box-shadow: 0 0 0 2px transparent; 
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother, more complex transition */
+  padding: 8px 15px;
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px transparent;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 nav ul li a:hover {
-  /* Solid, distinct background color */
-  background: #ffecb3; 
-  color: #4300e8; /* Change color to the deep purple from the header */
-  /* Inner shadow on hover for a pressed look, and subtle lift */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.1); 
-  transform: translateY(-2px); /* Subtle lift effect */
+  background: #ffecb3;
+  color: #4300e8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 /* Blog post container */
 .post-content, article {
   background: #ffffff;
-  padding: 30px 40px; /* More padding */
+  padding: 30px 40px;
   margin: 30px auto;
-  max-width: 850px; /* Slightly wider */
-  border-radius: 18px; /* Softer, more modern corners */
-  /* A more elegant, subtle shadow for a floating effect */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.03); 
+  max-width: 850px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-content:hover, article:hover {
-    transform: translateY(-5px); /* Lift on hover */
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
 }
 
 /* Poetry styling */
 .poetry {
-  font-family: 'Lora', serif; /* A more elegant, classical serif font */
+  font-family: 'Lora', serif;
   font-size: 1.4rem;
   font-style: italic;
   text-align: center;
-  line-height: 2.0; /* Increased line height for spacious feel */
-  background: #fffafa; /* Very subtle off-white/pink */
-  border: 1px solid #f39c12; /* Using a full border for a framed look */
-  border-left: 8px solid #f39c12; /* Thicker, bolder left accent */
+  line-height: 2.0;
+  background: #fffafa;
+  border: 1px solid #f39c12;
+  border-left: 8px solid #f39c12;
   padding: 30px;
   margin: 40px auto;
   max-width: 750px;
   border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.07), inset 0 0 10px rgba(0, 0, 0, 0.02); /* Inner and outer shadow */
-  color: #444; /* Slightly darker text for contrast on the light background */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07), inset 0 0 10px rgba(0, 0, 0, 0.02);
+  color: #444;
 }
 
 /* Footer */
 .site-footer {
   margin-top: auto;
-  /* Reverse the header gradient for visual balance */
   background: linear-gradient(45deg, #a858ff, #4300e8);
   text-align: center;
-  font-size: 1rem; /* Slightly larger text */
-  color: #eef3f8; /* Match the body background for a harmonious feel */
+  font-size: 1rem;
+  color: #eef3f8;
   padding: 20px 0;
-  /* Subtle top shadow to separate it from the content */
   box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
 }
