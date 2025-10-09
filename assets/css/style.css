@@ -13,11 +13,11 @@ body {
 
 /* Header styling */
 .site-header {
-  background: linear-gradient(135deg, #4300e8, #a858ff);
+  background: linear-gradient(135deg, #6a00ff, #0077ff); /* vibrant purple → blue */
   color: #fff;
   padding: 40px 0 30px 0;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3), 0 0 0 8px rgba(255, 255, 255, 0.05) inset;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .site-title {
@@ -25,11 +25,11 @@ body {
   margin: 0;
   font-weight: 800;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .site-description {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   margin-top: 10px;
   opacity: 0.95;
   font-weight: 300;
@@ -56,14 +56,13 @@ nav ul li a {
   font-size: 1.2rem;
   padding: 8px 15px;
   border-radius: 50px;
-  box-shadow: 0 0 0 2px transparent;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 nav ul li a:hover {
   background: #ffecb3;
   color: #4300e8;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
@@ -74,16 +73,16 @@ nav ul li a:hover {
   margin: 30px auto;
   max-width: 850px;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-content:hover, article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
 }
 
-/* Poetry styling */
+/* Poetry / Shayari styling */
 .poetry {
   font-family: 'Lora', serif;
   font-size: 1.4rem;
@@ -104,10 +103,13 @@ nav ul li a:hover {
 /* Footer */
 .site-footer {
   margin-top: auto;
-  background: linear-gradient(45deg, #a858ff, #4300e8);
+  background: linear-gradient(45deg, #0077ff, #6a00ff); /* reverse gradient */
   text-align: center;
   font-size: 1rem;
-  color: #eef3f8;
-  padding: 20px 0;
+  color: #ffffff;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
 }
