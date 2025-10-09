@@ -6,24 +6,24 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="title-container">
-      <h1 class="site-title">{{ site.title }}</h1>
-      <p class="site-description">{{ site.description }}</p>
-    </div>
+    <h1 class="site-title">{{ site.title }}</h1>
+    <p class="site-description">{{ site.description }}</p>
     <nav>
       <ul>
-        {% for item in site.nav %}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-        {% endfor %}
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/poetry/' | relative_url }}">Poetry</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Main content -->
   <main>
     {{ content }}
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
   </footer>
