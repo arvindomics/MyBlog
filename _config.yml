@@ -1,4 +1,4 @@
-title: "Arvind’s Blog"
+title: "Blog where science meets stories, neurons meet words."
 description: "Thoughts, notes, and stories ✨"
 theme: null
 
@@ -6,3 +6,4 @@ show_downloads: false
 
 include:
   - assets/css/style.css
+
