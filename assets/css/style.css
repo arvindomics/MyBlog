@@ -1,5 +1,5 @@
 /* ---------------------------------
-   GLOBAL STYLES (no changes needed here for the layout issue)
+   GLOBAL STYLES
 ----------------------------------*/
 body {
   font-family: 'Inter', sans-serif;
@@ -8,6 +8,7 @@ body {
   color: #1a202c;
   line-height: 1.6;
   box-sizing: border-box;
+  /* Safe padding for edge protection */
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -27,34 +28,34 @@ body > * {
   box-shadow: 0 4px 20px rgba(0, 50, 150, 0.4);
   position: relative; 
   
-  /* *** KEY CHANGE: Use Flex to justify space only between nav and content block *** */
+  /* Flexbox to push NAV to the right, content block will be centered within its 100% width */
   display: flex; 
   flex-wrap: wrap; 
-  justify-content: space-between; /* Pushes nav to the right */
-  align-items: flex-start; /* Aligns items to the top (important for multi-line content) */
+  justify-content: space-between; 
+  align-items: flex-start; /* Aligns content blocks to the top */
 }
 
 .header-content {
-  /* <<< KEY CHANGE: Max-width REMOVED and flex-grow: 1 removed. >>> */
-  /* This content block now occupies its necessary space and is centered internally. */
-  width: 100%; /* Ensures it takes up full horizontal space to center its children */
+  /* Takes full width but centers its content */
+  width: 100%; 
   margin: 0; 
-  text-align: center; /* Center everything inside this block */
+  text-align: center; 
 }
 
-/* PROFILE IMAGE (Size and Placement Fix) */
+/* PROFILE IMAGE (Prominent Size & Centering) */
 .profile-pic {
-  width: 120px; /* Increased size for prominence */
-  height: 120px; /* Increased size for prominence */
+  /* Increased Size */
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.9); /* Thicker, more prominent border */
+  /* Thicker border and deeper shadow for prominence */
+  border: 4px solid rgba(255, 255, 255, 0.9); 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
   
-  /* <<< PLACEMENT FIXES >>> */
-  display: block; /* Forces image onto its own line */
-  margin: 0 auto 15px auto; /* Centers the image and adds bottom spacing */
-  /* Removed vertical-align and horizontal margins */
+  /* Centering */
+  display: block; 
+  margin: 0 auto 15px auto; 
   
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -64,77 +65,30 @@ body > * {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* TITLE + DESCRIPTION (Stacking Fix) */
+/* TITLE + DESCRIPTION (Larger and Centered) */
 .site-title {
-  /* <<< PLACEMENT FIXES >>> */
-  display: block; /* Forces title onto its own line */
-  font-size: 3.2rem; /* MUCH larger for a bold statement */
+  display: block; 
+  font-size: 3.2rem; /* Larger, bolder title */
   font-weight: 900;
-  margin: 0 auto; /* Ensures it's centered */
-  max-width: 900px; /* Keeps the line length readable */
-  letter-spacing: -1px; /* Tighter spacing for a big title */
+  margin: 0 auto; 
+  max-width: 900px; 
+  letter-spacing: -1px; 
 }
 
 .site-description {
-  /* <<< PLACEMENT FIXES >>> */
   display: block; 
   font-size: 1.3rem; 
   color: #cfe4ff;
-  margin: 10px auto 0 auto; /* More margin from the title, centered */
-  max-width: 800px; /* Keeps description line length readable */
+  margin: 10px auto 0 auto; 
+  max-width: 800px; 
   font-weight: 300;
 }
 
-/* NAVIGATION */
+/* NAVIGATION (Anchored to Top Right) */
 nav {
-  /* This block will still be pushed to the right by Flexbox (space-between) */
   position: static; 
-  margin-left: auto; 
-  order: 2; /* Ensures nav is positioned correctly in the Flex flow */
-}
-
-/* Update mobile styles to match the new structure */
-@media (max-width: 900px) {
-  .site-header {
-    flex-direction: column; /* Stacks the content block and nav block vertically */
-    align-items: center; /* Centers the two main blocks */
-    padding: 30px 20px 20px; 
-  }
-
-  .header-content {
-      width: 100%; /* Takes full width on mobile */
-      text-align: center;
-  }
-  
-  .profile-pic {
-    width: 90px; /* Reduced for mobile */
-    height: 90px; /* Reduced for mobile */
-    margin: 0 auto 15px auto;
-    border: 3px solid rgba(255, 255, 255, 0.9);
-  }
-
-  .site-title {
-    font-size: 2.5rem; /* Reduced for mobile */
-  }
-
-  .site-description {
-    font-size: 1.1rem;
-  }
-
-  nav {
-    margin-top: 25px; /* More separation from text */
-    margin-left: 0;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* NAVIGATION */
-nav {
-  /* REMOVED position: absolute, top, right */
-  /* Flexbox parent (.site-header) now handles its position to the right */
-  position: static; 
-  margin-left: auto; /* Pushes it to the far right within the flex container */
+  margin-left: auto; /* Flex pushes it right */
+  order: 2; /* Ensures correct ordering in flex container */
 }
 
 nav ul {
@@ -151,13 +105,14 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* Glassmorphism/Transparent look */
+  background-color: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(5px); 
   padding: 8px 18px;
   border-radius: 8px;
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(5px); /* Re-added glassmorphism effect */
 }
 
 nav ul li a:hover,
@@ -169,7 +124,7 @@ nav ul li a.active {
 }
 
 /* ---------------------------------
-   MAIN CONTENT (no changes needed for header layout)
+   MAIN CONTENT
 ----------------------------------*/
 main, .page-content, .post-list, section, article {
   padding: 30px 50px;
@@ -188,7 +143,7 @@ article:hover {
 }
 
 /* ---------------------------------
-   POETRY BOX STYLE (no changes needed for header layout)
+   POETRY BOX STYLE
 ----------------------------------*/
 .poem-box {
   background: #f0f8ff;
@@ -201,7 +156,7 @@ article:hover {
 }
 
 /* ---------------------------------
-   FOOTER (no changes needed for header layout)
+   FOOTER
 ----------------------------------*/
 .site-footer {
   text-align: center;
@@ -232,46 +187,42 @@ article:hover {
 ----------------------------------*/
 @media (max-width: 900px) {
   .site-header {
-    /* Reset flex for mobile stacking */
+    /* Stack content and nav vertically on mobile */
     flex-direction: column; 
-    align-items: flex-start; /* Align header content to the left */
-    padding: 30px 20px; /* Reduced padding for mobile */
-    text-align: left; /* Ensure text alignment is consistent */
+    align-items: center; 
+    padding: 30px 20px 20px; 
   }
 
   .header-content {
-      max-width: 100%; /* Take full width on mobile */
-      text-align: center; /* Center content on mobile */
+      width: 100%; 
+      text-align: center; 
   }
-
+  
   .profile-pic {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 15px auto; /* Center profile pic */
-    display: block; /* Ensure it takes its own line */
+    /* Mobile image size */
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px auto; 
+    border: 3px solid rgba(255, 255, 255, 0.9);
   }
 
   .site-title {
-    font-size: 2.2rem;
-    display: block; /* Ensure title takes its own line */
-    text-align: center; /* Center title */
+    font-size: 2.5rem;
   }
 
   .site-description {
-    font-size: 1rem;
-    text-align: center; /* Center description */
+    font-size: 1.1rem;
   }
 
   nav {
-    position: static;
-    margin-top: 20px;
-    margin-left: 0; /* Reset auto margin */
-    width: 100%; /* Nav takes full width */
-    text-align: center; /* Center nav links */
+    margin-top: 25px; 
+    margin-left: 0; 
+    width: 100%; 
+    text-align: center; 
   }
 
   nav ul li {
-      margin: 0 8px;
+    margin: 0 8px;
   }
 
   main, .page-content, .post-list, section, article {
