@@ -1,16 +1,19 @@
 ---
 layout: default
-title: Home
+title: "Home"
 ---
 
-# Welcome to my blog! ✨
-Here you’ll find my latest posts below.
+<h2>Welcome to my blog! ✨</h2>
+<p>Here you’ll find my latest science stories and thoughts — not poetry.</p>
 
-<ul>
+<div class="post-list">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span style="font-size:0.9em; color:#888;"> — {{ post.date | date: "%B %d, %Y" }}</span>
-    </li>
+    {% unless post.categories contains "poetry" %}
+      <article class="post-content">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+        <div>{{ post.excerpt }}</div>
+      </article>
+    {% endunless %}
   {% endfor %}
-</ul>
+</div>
