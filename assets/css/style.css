@@ -152,6 +152,19 @@ h1, h2, h3 {
   box-shadow: 0 -2px 15px rgba(0, 60, 180, 0.25);
 }
 
+.site-footer p {
+  margin: 0;
+  color: #dbeafe; /* light blue-gray */
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+.site-footer p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
 /* ---------------------------------
    POETRY / POST BOX
 ----------------------------------*/
