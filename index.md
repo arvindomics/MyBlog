@@ -4,7 +4,7 @@ title: "Home"
 ---
 
 <h2>Welcome to my blog! ✨</h2>
-<p>Here you’ll find my latest science stories and thoughts — not poetry.</p>
+<p>Here you’ll find my latest science stories and thoughts.</p>
 
 <div class="post-list">
   {% for post in site.posts %}
@@ -17,3 +17,4 @@ title: "Home"
     {% endunless %}
   {% endfor %}
 </div>
+
