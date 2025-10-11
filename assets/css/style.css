@@ -1,5 +1,5 @@
 /* ---------------------------------
-   GLOBAL STYLES
+   GLOBAL STYLES (no changes needed here for the layout issue)
 ----------------------------------*/
 body {
   font-family: 'Inter', sans-serif;
@@ -22,28 +22,38 @@ body > * {
 .site-header {
   background: linear-gradient(135deg, #0077ff, #0056b3);
   color: white;
-  padding: 60px 80px 50px;
+  padding: 40px 80px 40px; /* Adjust padding for better visual balance */
   margin: 0 -15px;
   box-shadow: 0 4px 20px rgba(0, 50, 150, 0.4);
-  position: relative;
-  text-align: center;
+  position: relative; /* Needed for any absolute child, but we'll use flex for layout */
+
+  /* *** NEW FLEXBOX FOR HEADER LAYOUT *** */
+  display: flex; /* Make it a flex container */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-between; /* Push content to left, nav to right */
+  align-items: center; /* Vertically center items */
 }
 
 .header-content {
-  max-width: 80%;
-  margin: 0 auto;
+  /* This div will contain the profile pic, title, and description */
+  /* Allow it to grow, but also set a max-width to not overwhelm the nav */
+  flex-grow: 1;
+  max-width: 70%; 
+  margin: 0; /* Reset margin from previous auto-centering */
+  text-align: left; /* Align its content to the left */
 }
 
 /* PROFILE IMAGE (Refined & Balanced) */
 .profile-pic {
-  width: 29px;
-  height: 29px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  display: block;
-  margin: 0 auto 20px auto;
+  display: inline-block; /* Changed to inline-block to align with title if needed, or flex parent will handle */
+  vertical-align: middle; /* Align with text if next to it */
+  margin: 0 20px 0 0; /* Adjust margin for proper spacing with title */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -54,24 +64,30 @@ body > * {
 
 /* TITLE + DESCRIPTION */
 .site-title {
+  display: inline-block; /* Allows it to sit next to the image */
+  vertical-align: middle; /* Align with image */
   font-size: 2.5rem;
   font-weight: 900;
-  margin: 10px 0 0;
+  margin: 0; /* Reset margins */
   letter-spacing: -0.5px;
 }
 
 .site-description {
+  /* Keep description below title, and align left within header-content */
   font-size: 1.2rem;
   color: #cfe4ff;
   margin-top: 8px;
   font-weight: 300;
+  display: block; /* Ensure it takes its own line */
 }
+
 
 /* NAVIGATION */
 nav {
-  position: absolute;
-  top: 50px;
-  right: 80px;
+  /* REMOVED position: absolute, top, right */
+  /* Flexbox parent (.site-header) now handles its position to the right */
+  position: static; 
+  margin-left: auto; /* Pushes it to the far right within the flex container */
 }
 
 nav ul {
@@ -94,6 +110,7 @@ nav ul li a {
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px); /* Re-added glassmorphism effect */
 }
 
 nav ul li a:hover,
@@ -105,7 +122,7 @@ nav ul li a.active {
 }
 
 /* ---------------------------------
-   MAIN CONTENT
+   MAIN CONTENT (no changes needed for header layout)
 ----------------------------------*/
 main, .page-content, .post-list, section, article {
   padding: 30px 50px;
@@ -124,7 +141,7 @@ article:hover {
 }
 
 /* ---------------------------------
-   POETRY BOX STYLE
+   POETRY BOX STYLE (no changes needed for header layout)
 ----------------------------------*/
 .poem-box {
   background: #f0f8ff;
@@ -137,7 +154,7 @@ article:hover {
 }
 
 /* ---------------------------------
-   FOOTER
+   FOOTER (no changes needed for header layout)
 ----------------------------------*/
 .site-footer {
   text-align: center;
@@ -168,31 +185,46 @@ article:hover {
 ----------------------------------*/
 @media (max-width: 900px) {
   .site-header {
-    text-align: center;
-    padding: 40px 30px;
+    /* Reset flex for mobile stacking */
+    flex-direction: column; 
+    align-items: flex-start; /* Align header content to the left */
+    padding: 30px 20px; /* Reduced padding for mobile */
+    text-align: left; /* Ensure text alignment is consistent */
+  }
+
+  .header-content {
+      max-width: 100%; /* Take full width on mobile */
+      text-align: center; /* Center content on mobile */
   }
 
   .profile-pic {
     width: 70px;
     height: 70px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto; /* Center profile pic */
+    display: block; /* Ensure it takes its own line */
+  }
+
+  .site-title {
+    font-size: 2.2rem;
+    display: block; /* Ensure title takes its own line */
+    text-align: center; /* Center title */
+  }
+
+  .site-description {
+    font-size: 1rem;
+    text-align: center; /* Center description */
   }
 
   nav {
     position: static;
     margin-top: 20px;
+    margin-left: 0; /* Reset auto margin */
+    width: 100%; /* Nav takes full width */
+    text-align: center; /* Center nav links */
   }
 
-  .header-content {
-    max-width: 100%;
-  }
-
-  .site-title {
-    font-size: 2.2rem;
-  }
-
-  .site-description {
-    font-size: 1rem;
+  nav ul li {
+      margin: 0 8px;
   }
 
   main, .page-content, .post-list, section, article {
