@@ -5,11 +5,11 @@ permalink: /poetry/
 ---
 
 <h1 class="page-title">My Shayari & Poetry</h1>
-<p style="text-align:center;">Here you'll find all my poetry posts gathered in one place.</p>
+<p style="text-align:center;">Here you’ll find all my poetry posts gathered in one place.</p>
 
 <div class="post-list">
   {% for post in site.posts %}
-    {% if post.title contains "shayari" or post.title contains "Shayari" %}
+    {% if post.categories contains "poetry" %}
       <article class="post-content">
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
