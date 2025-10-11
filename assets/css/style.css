@@ -26,14 +26,29 @@ body > * {
   margin: 0 -15px;
   box-shadow: 0 4px 20px rgba(0, 50, 150, 0.4);
   position: relative;
+  text-align: center;
 }
 
 .header-content {
   max-width: 80%;
+  margin: 0 auto;
 }
 
+/* PROFILE IMAGE */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto 25px auto;
+}
+
+/* TITLE + DESCRIPTION */
 .site-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 900;
   margin: 0;
   letter-spacing: -0.5px;
@@ -46,7 +61,7 @@ body > * {
   font-weight: 300;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
   position: absolute;
   top: 50px;
@@ -149,6 +164,12 @@ article:hover {
   .site-header {
     text-align: center;
     padding: 40px 30px;
+  }
+
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
   }
 
   nav {
