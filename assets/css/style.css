@@ -33,7 +33,7 @@ body {
 
 /* Smaller profile image for balance */
 .profile-pic {
-  width: 110px;   /* reduced from 140px */
+  width: 110px;
   height: 110px;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.9);
@@ -49,7 +49,7 @@ body {
 }
 
 .site-title {
-  font-size: 2.4rem; /* slightly smaller for better proportion */
+  font-size: 2.4rem;
   margin: 0;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -140,6 +140,16 @@ nav ul li a:hover {
   padding: 20px 0;
   width: 100%;
   box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+/* Poetry Page Title Styling */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #6a00ff;
+  margin-top: 25px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-weight: 700;
 }
 
 /* Animations */
