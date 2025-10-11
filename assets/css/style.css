@@ -6,6 +6,13 @@ body {
   margin: 0;
   background: #f6f8fb;
   color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply safe padding to everything inside the body */
+body > * {
+  box-sizing: border-box;
 }
 
 /* -------------------------------
@@ -70,21 +77,57 @@ nav ul li a.active {
 }
 
 /* -------------------------------
-   Main Content
+   Main / Content Containers
 --------------------------------*/
-main {
-  padding: 50px 100px; /* Adds space around content */
+main, .page-content, .post-list, section, article {
+  padding: 40px 80px;
   max-width: 1000px;
-  margin: 0 auto; /* Centers content */
+  margin: 0 auto;
   background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Mobile-friendly adjustments */
+/* Add extra spacing between header and content */
+main, .page-content {
+  margin-top: 40px;
+}
+
+/* -------------------------------
+   Footer
+--------------------------------*/
+.site-footer {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  color: white;
+  font-size: 0.95rem;
+  margin-top: 50px;
+}
+
+/* -------------------------------
+   Post / Poetry Styling
+--------------------------------*/
+article {
+  margin-bottom: 40px;
+}
+
+.poem-box {
+  background: #fff8f6;
+  border-left: 6px solid #ff9800;
+  border-radius: 12px;
+  padding: 20px;
+  font-style: italic;
+  line-height: 1.8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------------
+   Responsive Design
+--------------------------------*/
 @media (max-width: 768px) {
-  main {
-    padding: 25px 30px;
+  main, .page-content, .post-list, section, article {
+    padding: 20px 25px;
     margin: 15px;
   }
 
@@ -99,38 +142,9 @@ main {
 }
 
 /* -------------------------------
-   Footer
+   Paragraph / Text Defaults
 --------------------------------*/
-.site-footer {
-  text-align: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
-  color: white;
-  font-size: 0.95rem;
-}
-
-/* -------------------------------
-   Post / Poetry Styling
---------------------------------*/
-article {
-  margin-bottom: 40px;
-}
-
-article h1, article h2, article h3 {
-  color: #222;
-}
-
-.poem-box {
-  background: #fff8f6;
-  border-left: 6px solid #ff9800;
-  border-radius: 12px;
-  padding: 20px;
-  font-style: italic;
-  line-height: 1.8;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* Optional: add this if you want consistent text spacing everywhere */
 p {
   line-height: 1.7;
+  margin: 0 0 15px;
 }
