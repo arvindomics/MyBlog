@@ -5,13 +5,14 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
+
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="header-content">
-      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Arvind's photo" class="profile-pic">
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile picture" class="profile-pic">
       <h1 class="site-title">{{ site.title }}</h1>
       <p class="site-description">{{ site.description }}</p>
+
       <nav>
         <ul>
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
@@ -21,12 +22,10 @@
     </div>
   </header>
 
-  <!-- Main content -->
-  <main>
+  <main class="content-area">
     {{ content }}
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <p>&copy; {{ site.time | date: '%Y' }} Arvind’s Blog</p>
   </footer>
